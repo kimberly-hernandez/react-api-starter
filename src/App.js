@@ -9,9 +9,14 @@ import Navigation from "./components/navigation/Navigation";
 //Import Welcome Component
 import Welcome from "./components/welcome/Welcome";
 
+
 //Import user related components
 import UserList from "./components/userList/UserList";
 import User from './components/user/User';
+
+//Import post related components
+import PostList from "./components/postList/PostList";
+import Post from "./components/post/Post";
 
 //Import NoMath (404) Component
 import NoMatch from "./components/noMatch/NoMatch";
@@ -38,6 +43,17 @@ function App() {
           path="/users"
           component={UserList}
         />
+
+        <Route
+        path="/post/:id"
+        component ={Post}
+        />
+
+        <Route
+        path="/posts"
+        component ={PostList}
+        />
+
         <Route
           path="/user/:id"
           component={User}
